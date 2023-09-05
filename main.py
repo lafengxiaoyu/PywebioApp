@@ -1,3 +1,4 @@
+import logging
 from datetime import datetime
 
 from pywebio.input import *
@@ -56,6 +57,7 @@ def main():
 def stage1():
     global start_time
     start_time = datetime.now()
+    logging.info("start_time: %s" % start_time)
     with use_scope('scope1', clear=True):
         put_markdown('# This is the 1st Stage, you start at %s' % start_time.strftime("%H:%M:%S"))
     trial_number = 1

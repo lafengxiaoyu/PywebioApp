@@ -9,8 +9,8 @@ def beautiful_decorator(func):
 
 @beautiful_decorator
 def add_two_numbers(a, b):
-    return a + b
+    return a - b
 
 
-c = add_two_numbers(4, input_value)
+c = add_two_numbers(3, input_value)
 print("output is: ", c)
