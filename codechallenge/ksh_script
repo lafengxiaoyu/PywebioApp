@@ -1,0 +1,21 @@
+#!/bin/ksh
+
+ksh() {
+    Change_man=$1
+    SRE=$2
+
+    if [[ -n $Change_man && -n $SRE && $Change_man =~ ^[0-9]+$ && $SRE =~ ^[0-9]+$ ]]; then
+        output=$((~Change_man+++--SRE))
+    else
+         Change_man-=1
+         SRE+=10
+         output=$((Change_man+++--~SRE))
+    while [[ $Change_man -lt $SRE ]]
+     do
+       Change_man=$((Change_man + 1))
+     done
+    fi
+    echo "The output is: $output"
+}
+
+ksh 8 4
