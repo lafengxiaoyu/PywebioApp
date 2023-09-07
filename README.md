@@ -13,7 +13,7 @@ right now I only hard code the stage number as three. The answer is in the `answ
 ## 3. the code challenge
 This is one of the stage of escape room. we have prepared four code snippet, which will produce a four-digit password for the lock.
 
-- I have finished three of them, only the ansible one is to be continued.
+- the code in under the folder `codechallenge`
 
 ## 4. some screenshots of the app
 ### 4.1 Login page

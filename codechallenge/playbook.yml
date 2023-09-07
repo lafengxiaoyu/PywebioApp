@@ -1,8 +1,16 @@
-- hosts: all
-  vars:
-    - username: sammy
-    - home: /home/sammy
+---
+- hosts: localhost
+  gather_facts: false
+  vars_prompt:
+    - name: "number"
+      prompt: "Enter a number: "
+      private: no
+
   tasks:
-    - name: print variables
+    - name: Calculate the result
+      set_fact:
+        result: "{{ (number | int * 3) if (number | int + 5) else (number | int - 5) }}"
+
+    - name: Display the result
       debug:
-        msg: "Username: {{ username }}, Home dir: {{ home }}"
+        msg: "The result for the input number {{ number }} is {{ result }}"
