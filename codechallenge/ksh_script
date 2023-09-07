@@ -1,8 +1,8 @@
 #!/bin/ksh
 
 ksh() {
-    Change_man=$1
-    SRE=$2
+    Change_man=8
+    SRE=4
 
     if [[ -n $Change_man && -n $SRE && $Change_man =~ ^[0-9]+$ && $SRE =~ ^[0-9]+$ ]]; then
         output=$((~Change_man+++--SRE))
@@ -18,4 +18,4 @@ ksh() {
     echo "The output is: $output"
 }
 
-ksh 8 4
+ksh
