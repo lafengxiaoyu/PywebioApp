@@ -1,17 +1,24 @@
-let x = -6
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
 
-function js_function(x) {
-    let nums = [1, 2, 3];
+function js_function() {
 
-    nums.push(4, 9);
-    nums.push(x);
+    readline.question('Enter the input: ', input => {
+        let nums = [1, 2, 3];
 
-    let SRE = nums.slice(1, 4).filter(n => n % 2 === 0).map(n => n * 2).reduce((a, n) => a + n, 0);
+        nums.push(4);
+        nums.push(input);
 
-    console.log("output is:", SRE >>>= 1)
-    return SRE;
+        let SRE = nums.slice(1, 5).filter(n => n % 2 === 0).map(n => n * 2).reduce((a, n) => a + n, 0);
+
+        console.log("output is: ", SRE >>>= 1)
+        readline.close();
+    });
+
 }
 
-js_function(x)
 
+js_function()
