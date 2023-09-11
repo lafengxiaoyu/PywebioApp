@@ -14,5 +14,5 @@ def main():
     sre = add_two_numbers(3, input_value)
     print("the result is: ", sre)
 
-
+# run the script
 main()

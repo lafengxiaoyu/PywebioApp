@@ -18,4 +18,5 @@ ksh() {
     echo "The output is: $output"
 }
 
+# run the script
 ksh

@@ -20,5 +20,5 @@ function js_function() {
 
 }
 
-
+// run the script
 js_function()
