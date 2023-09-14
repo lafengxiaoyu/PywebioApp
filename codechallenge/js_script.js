@@ -12,9 +12,9 @@ function js_function() {
         nums.push(4);
         nums.push(input);
 
-        let SRE = nums.slice(1, 5).filter(n => n % 2 === 0).map(n => n * 2).reduce((a, n) => a + n, 0);
+        let SRE = nums.slice(3, 5).filter(n => n % 2 === 0).map(n => n * 2).reduce((a, n) => a + n, 0);
 
-        console.log("output is: ", SRE >>>= 1)
+        console.log("output is: ", SRE >>>= 2)
         readline.close();
     });
 
