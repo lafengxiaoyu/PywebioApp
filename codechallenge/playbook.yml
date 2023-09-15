@@ -9,7 +9,7 @@
   tasks:
     - name: Calculate the result
       set_fact:
-        result: "{{ (number | int + 3) if (number | int * 2) else (number | int - 5) }}"
+        result: "{{ (number | int + 3) if (number | int * 2 % 2 == 0) }}"
 
     - name: Display the result
       debug:

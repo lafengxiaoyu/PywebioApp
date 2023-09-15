@@ -1,19 +1,13 @@
 #!/bin/ksh
 
 ksh() {
-    Change_man=5
+    CBNL=5
     SRE=4
 
-    if [[ -n $Change_man && -n $SRE && $Change_man =~ ^[0-9]+$ && $SRE =~ ^[0-9]+$ ]]; then
-        output=$((~-Change_man+++--SRE))
+    if [[ -n $CBNL && -n $SRE && $CBNL =~ ^[0-9]+$ && $SRE =~ ^[0-9]+$ ]]; then
+        output=$((~-CBNL+++--SRE))
     else
-         Change_man-=5
-         SRE+=10
-         output=$((Change_man+++--~SRE))
-    while [[ $Change_man -lt $SRE ]]
-     do
-       Change_man=$((Change_man + 1))
-     done
+        output=$((CBNL+++--SRE))
     fi
     echo "The output is: $output"
 }
